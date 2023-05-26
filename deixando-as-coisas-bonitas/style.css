@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* Color Theme Swatches in RGBA */
+.Blue-Teal-Monochromatic-1-rgba { color: rgba(52, 135, 135, 1); }
+.Blue-Teal-Monochromatic-2-rgba { color: rgba(33, 186, 186, 1); }
+.Blue-Teal-Monochromatic-3-rgba { color: rgba(158, 247, 237, 1); }
+.Blue-Teal-Monochromatic-4-rgba { color: rgba(249, 126, 8, 1); }
+.Blue-Teal-Monochromatic-5-rgba { color: rgba(242, 68, 4, 1); }
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: whitesmoke;
+    width: 900px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto; 
+    box-shadow: 3px 3px 3px rgba(162, 44, 1, 0.909);
+}
+
+h1 {
+    color: rgba(52, 135, 135, 1);
+    text-shadow: 1px 1px rgba(34, 90, 90, 0.89);
+    text-align: center;
+}
+
+h2 {
+    color: rgba(33, 186, 186, 1);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+}
+
+body {
+    background-image: 
+    linear-gradient(to bottom, rgba(242, 68, 4, 0.9), rgba(249, 126, 8, 0.8));
+    background-attachment: fixed;
+}
