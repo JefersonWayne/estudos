@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturação da tabela</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            margin:  auto;
+            width: 50vw;
+            font-weight: bold;
+            padding: 0.5em;
+        }
+        table > caption {
+            color: rgb(32, 32, 32);
+            background-color: rgb(183, 183, 183);
+            font-size: 1.5em;
+            padding: 0.5em;
+        }
+        table > * > tr > * {
+            border: 1px solid black;
+            padding: 0.5em;
+            font-weight: lighter;
+        }
+        table > thead > tr > * {
+            font-weight: bold;
+            text-align: left;
+            width: auto;
+        }
+
+        table > tbody > tr > * {
+            text-align: left;
+            width: auto;
+        }
+        table > tbody > tr:nth-child(2n) {
+            background-color: rgb(221, 221, 221);
+        }
+
+        table > tfoot > tr > * {
+            font-weight: bold;
+            text-align: left;
+            width: auto;
+        }
+
+        table > thead > tr {
+            background-color: rgb(98, 98, 98);
+            color: white;
+        }
+        table > tfoot > tr {
+            background-color: rgb(98, 98, 98);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Unidades Federativas do Brasil por População</caption>
+        <thead>
+            <tr>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">População</th>
+                <th scope="col">País Comparável (Habitantes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">São Paulo</th>
+                <td>46.024.937</td>
+                <td>Espanha (46.754.778)</td>
+            </tr>
+            <tr>
+                <th scope="row">Minas Gerais</th>
+                <td>20.732.660</td>
+                <td>Burquina Fasso (20.903.273)</td>
+            </tr>
+            <tr>
+                <th scope="row">Rio de Janeiro</th>
+                <td>16.615.526</td>
+                <td>Camboja (16.718.965)</td>
+            </tr>
+            <tr>
+                <th scope="row">Bahia</th>
+                <td>14.659.023</td>
+                <td>Zimbabwe (14.862.924)</td>
+            </tr>
+            <tr>
+                <th scope="row">Paraná</th>
+                <td>11.835.379</td>
+                <td>Tunísia (11.818.619)</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total:</th>
+                <td>109.867.525</td>
+                <td>111.058.559</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
