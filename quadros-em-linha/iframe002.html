@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo local no iframe</title>
+    <style>
+        iframe {
+            width: 50vw;
+            height: 60vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi sapiente mollitia veritatis soluta. Eum, dolor qui tempora id maxime esse nesciunt unde impedit, enim aliquam aut? Perferendis aliquid laboriosam minus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque vitae iste rem maiores natus. Doloremque corrupti veritatis obcaecati maxime eveniet nihil vitae modi, sapiente nobis odit. Dolorum in soluta ex.</p>
+
+    <iframe src="extras/pagina.html" frameborder="0"></iframe>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eum repellendus deserunt debitis nihil vel itaque sapiente soluta inventore dignissimos esse magnam ipsam, quibusdam voluptate libero consectetur dolorem cupiditate. Iusto?
+    In, voluptatibus sint accusantium autem tenetur laboriosam tempora nesciunt commodi reprehenderit magnam perspiciatis dignissimos consequatur ipsam eius, dolorum exercitationem sunt quam animi eum? Beatae harum, culpa ab doloribus dignissimos temporibus?</p>
+
+    <iframe srcdoc="<h1>Conteúdo Dinamico</h1><p>Este conteúdo foi gerado dinmicamente dentro da propria página.s" frameborder="0"></iframe>
+</body>
+</html>
