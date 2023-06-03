@@ -8,11 +8,19 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php" method="get">
-        <label for="iname">Qual seu nome?</label>
-        <input type="text" name="nome" id="iname">
-        <label for="ipassword">Qual sua senha?</label>
-        <input type="password" name="password" id="ipassword">
+    <form action="cadastro.php" method="POST">
+        <div>
+            <label for="id-name">Qual seu nome?</label>
+            <input type="text" name="name" id="id-name">
+        </div>
+        <div>
+            <label for="id-lastname">Qual seu sobrenome?</label>
+            <input type="text" name="lastname" id="id-lastname">
+        </div>
+        <div>
+            <label for="id-password">Qual sua senha?</label>
+            <input type="password" name="password" id="id-password">
+        </div>
         <input type="submit" value="Enviar">
     </form>
 </body>
