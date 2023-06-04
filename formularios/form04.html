@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4 de Formulário</title>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="sexo-feminino" value="F" checked>
+            <label for="sexo-feminino">Feminino</label><br>
+            <input type="radio" name="sexo" id="sexo-masculino" value="M">
+            <label for="sexo-masculino">Masculino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Meio de locomoção</legend>
+            <input type="checkbox" id="carro">
+            <label for="carro">Carro</label><br>
+            <input type="checkbox" id="moto">
+            <label for="moto">Moto</label><br>
+            <input type="checkbox" id="bicicleta">
+            <label for="bicicleta">Bicicleta</label><br>
+            <input type="checkbox" id="onibus">
+            <label for="onibus">Ônibus</label><br>
+            <input type="checkbox" id="caminhando">
+            <label for="caminhando">Caminhando</label><br>
+        </fieldset>
+        <fieldset>
+            <label for="locomocao">Seu meio de locomoção</label>
+            <select id="locomocao">
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+                <option value="bicicleta">Bicicleta</option>
+                <option value="onibus">Ônibus</option>
+                <option value="caminhando">Caminhando</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label for="comida">qual sua comida favorita?</label>
+            <select name="" id="">
+                <optgroup label="Doces">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="bala-de-goma">Bala de goma</option>
+                    <option value="chiclete">Chiclete</option>
+                </optgroup>
+                <optgroup label="Salgados">
+                    <option value="pastel">pastel</option>
+                    <option value="coxinha">coxinha</option>
+                    <option value="enroladinho">enroladinho</option>
+                </optgroup>
+            </select>
+
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</body>
+</html>

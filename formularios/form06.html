@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select, datalist e textarea</title>
+</head>
+<body>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Select</legend>
+            <select name="doce" id="doces">
+                <option value="bala">Bala</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <div>
+                <legend>Datalist</legend>
+                <input type="text" name="text" id="id-text" list="porc">
+                <datalist id="porc">
+                    <option>Pedreiro</option>
+                    <option>Marceneiro</option>
+                    <option>giota</option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>textarea</legend>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Submitar">
+            <input type="reset" value="Resetar">
+        </fieldset>
+    </form>
+</body>
+</html>
