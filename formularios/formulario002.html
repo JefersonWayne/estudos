@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contéudo Principal</title>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="id-user">Nome de usuário</label>
+            <input type="text" name="user" id="id-user" required minlength="6" maxlength="16" size="16" placeholder="Digite seu nome aqui!" autocomplete="username">
+        </div>
+        <div>
+            <label for="id-password">Senha</label>
+            <input type="password" name="password" id="id-password" required minlength="8" maxlength="20" size="16" placeholder="Digite sua senha aqui!" autocomplete="current-password">
+        </div>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
