@@ -5,19 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form > div {
+            margin: 1em;
+        }
+
+        form > div > label {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <form action="cadastro.php" method="get">
         <div>
-            <label for="id-name">Nome</label>
+            <label for="id-name">Nome</label><br>
             <input type="text" name="name" id="id-name" required>
         </div>
         <div>
-            <label for="id-lastname">Sobrenome</label>
+            <label for="id-lastname">Sobrenome</label><br>
             <input type="text" name="name" id="id-lastname" required>    
         </div>
         <div>
-            <label for="iperfil">Foto de perfil</label>
+            <label for="iperfil">Foto de perfil</label><br>
             <input type="file" name="perfil" id="iperfil" accept="image/*">
         </div>
         <div>
@@ -30,16 +46,19 @@
             </fieldset>
         </div>
         <div>
-            <label for="id-birth">Data de nascimento</label>
+            <label for="id-birth">Data de Nascimento</label><br>
             <input type="date" name="date" id="id-birth" required>
         </div>
         <div>
-            <label for="">Nota média</label>
-            <input type="number" name="media" id="id-media" min="0" max="10" step="0.1" required>
+            <label for="id-media">Nota Média</label><br>
+            <input type="number" name="media" id="id-media" min="0" max="10" step="0.1" value="5" required>
         </div>
         <div>
-            <label for="id-cpf">CPF</label>
-            <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value="000.000.000-00" title="Digite um CPF válido">
+            <label for=""></label>
+        </div>
+        <div>
+            <label for="id-cpf">CPF</label><br>
+            <input type="text" name="cpf" id="id-cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value="000.000.000-00" title="Digite um CPF válido">
         </div>
         <div>
             <input type="submit" value="Enviar">
