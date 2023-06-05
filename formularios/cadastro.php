@@ -1,1 +1,0 @@
-Arquivos foram enviados com sucesso!
