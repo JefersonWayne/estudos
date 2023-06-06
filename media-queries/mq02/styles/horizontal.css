@@ -1,3 +1,10 @@
 @charset "UTF-8";
 
 /*Configurações para telas na horizontal*/
+
+body {
+    background: url("/media-queries/images/cev-landscape.jpg");
+    background-size: cover;    
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
