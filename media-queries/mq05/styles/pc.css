@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* Folha de estilo dedicada para telas de computadores*/
+
+body {
+    background: url("/media-queries/images/back-pc.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 20em;
+    border-radius: 0.5em;
+}
+
+main > img#pc {
+    display: block;
+}
