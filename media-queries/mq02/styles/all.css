@@ -11,11 +11,4 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #233eff;
-}
-
-body > main {
-    color: white;
-    text-shadow: 0 0 1em hsla(0, 0%, 0%, 0.5);
-    text-align: center;
 }

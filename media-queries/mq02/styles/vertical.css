@@ -3,8 +3,8 @@
 /*Configurações para telas na vertical*/
 
 body {
-    background: url("/media-queries/images/cev-portrait.jpg");
-    background-size: cover;    
+    background: #233eff url("/media-queries/images/cev-portrait.jpg");
+    background-size: contain;    
     background-position: center bottom;
     background-repeat: no-repeat;
 }
