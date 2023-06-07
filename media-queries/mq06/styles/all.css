@@ -31,6 +31,26 @@ header > #icon-menu {
     display: none;
 }
 
+header > #menu {
+    padding: 1em;
+}
+
+
+header > #menu > a {
+    color: white;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    padding: 0.4em;
+    font-size: 0.8em;
+    border-radius: 0.2em;
+}
+header > #menu > a:hover {
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 0.3em 1em 0em rgba(0, 0, 0, 0.4);
+    transition: 0.4s;
+}
+
 main {
     background-color: rgb(232, 232, 232);
 }

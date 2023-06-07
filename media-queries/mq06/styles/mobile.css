@@ -8,17 +8,42 @@ main > article {
 
 header > #menu {
     display: none;
+    z-index: 1;
+    position: relative;
 }
 
 header > #menu > a {
     display: block;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    padding: 0.8em;
+    position: relative;
+    z-index: 1;
+}
+
+header > #menu > a:hover {
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 0.3em 1em 0em rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+    transition: 0.4s;
 }
 
 header > #icon-menu {
     display: block;
-    cursor: pointer;
-    color: white;
-    background-color: rgb(143, 143, 143);
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
     padding: 0.5em;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+header > #icon-menu:hover {
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 0.3em 1em 0em rgba(0, 0, 0, 0.4);
+    transition: 0.4s;
 }

@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/all.css" media="all">
+    <link rel="stylesheet" href="styles/all.css" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Media Queries: Exemplo 06</title>
 </head>
-<body>
+<body onresize="resizeBody()">
     <header>
         <h1>Website de Exemplo</h1>
         <span class="material-symbols-outlined" id="icon-menu" onclick="clickMenu()">menu</span>
         <menu id="menu">
-            <a href="#" id="olist">Aba 1</a>
-            <a href="#" id="olist">Aba 2</a>
-            <a href="#" id="olist">Aba 3</a>
-            <a href="#" id="olist">Aba 4</a>
-            <a href="#" id="olist">Aba 5</a>
+            <a href="#" id="olist">Página 1</a>
+            <a href="#" id="olist">Página 2</a>
+            <a href="#" id="olist">Página 3</a>
+            <a href="#" id="olist">Página 4</a>
+            <a href="#" id="olist">Página 5</a>
         </menu>
     </header>
     <main>
@@ -50,9 +50,12 @@
             }
         }
 
-        function recrutarLink(event) {
-            var link = event.currentTarget.querySelector('a');
-            link.style.color = 'red';
+        function resizeBody() {
+            if (window.innerWidth >= 768){
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
         }
     </script>
 </body>
