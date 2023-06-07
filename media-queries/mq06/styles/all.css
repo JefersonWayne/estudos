@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/*Folhas de estilos dedicada para todos dispositivos */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    cursor: default;
+    list-style-type: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header > h1 {
+    background-color: rgb(212, 212, 212);
+    text-align: center;
+    padding: 0.5em;
+}
+
+header {
+    background-color: rgb(212, 212, 212);
+}
+
+header > #menu {
+    padding: 0.8em;
+}
+
+header > #menu > #icon-menu{
+    display: none;
+}
+
+header > #menu > #olist {
+    text-align: left;
+    background-color: rgb(212, 212, 212);
+}
+
+header > #menu > #olist > li > a {
+    display: inline;
+    width: auto;
+    margin: 0.25em;
+    border-radius: 0.2em;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    padding: 0.5em;
+    font-size: 0.8em;
+}
+header > #menu > #olist > li:hover > a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 21, 21);
+    box-shadow: 0 0 0.5em 0 rgba(162, 162, 162, 0.5);
+    transition: 0.3s;
+    cursor: pointer
+}
+
+main {
+    background-color: rgb(232, 232, 232);
+}
+
+main > article {
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 768px;
+    text-align: justify;
+    padding: 0.8em;
+}
+
+main > article > h1,
+main > article > h2 {
+    margin: 0.4em 0;
+    padding: 0.3em;
+    text-align: left;
+    background: linear-gradient(to right, rgb(204, 204, 204), white);
+}
+
+main > article > p {
+    text-indent: 0.4em;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
