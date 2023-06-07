@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/all.css" media="all">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Media Queries: Exemplo 06</title>
+</head>
+<body>
+    <header>
+        <h1>Website de Exemplo</h1>
+        <span class="material-symbols-outlined" id="icon-menu" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <a href="#" id="olist">Aba 1</a>
+            <a href="#" id="olist">Aba 2</a>
+            <a href="#" id="olist">Aba 3</a>
+            <a href="#" id="olist">Aba 4</a>
+            <a href="#" id="olist">Aba 5</a>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h1>Media Queries</h1>
+            <h2>O que são Media Queries?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dicta tenetur similique, debitis facere dolorem. Fuga consequuntur quis tempore incidunt. Minima inventore asperiores explicabo tempore odio ducimus necessitatibus maxime consequatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque fugiat culpa aliquid asperiores ratione beatae veritatis porro, ab veniam mollitia ipsam repellat dolor minus neque reprehenderit maiores consectetur amet consequuntur.</p>
+            <h2>O que são Media Types?</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto excepturi, illum facere id odit repudiandae eveniet libero ad, ut quis iure aliquam, ratione sed quo illo deleniti eius. Doloremque, minus.</p>
+            <h2>O que são Media Features?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste optio ullam cumque qui assumenda voluptate voluptatum nihil sed dicta maxime harum consequuntur distinctio magni aut commodi recusandae incidunt cum?</p>
+            <h2>O que é Mobile First?</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, odit doloremque vitae itaque ratione facilis corporis nisi reiciendis dolorem autem voluptates, accusantium neque aspernatur deserunt distinctio, sunt exercitationem fugit nemo.
+            Dignissimos architecto atque rerum omnis ad. Eos optio, perferendis velit iusto facere dicta nihil itaque voluptatum reprehenderit, ratione in? Ratione iste a officia quo, iure praesentium ducimus debitis ut quis.
+            Animi voluptate quas, rerum sapiente reprehenderit officiis ad, quos porro sint debitis soluta obcaecati voluptatem culpa corporis ea at tempora! Ex alias odit incidunt assumenda molestias enim iure obcaecati exercitationem?</p>
+        </article>
+    </main>
+    <footer>
+        Site de exemplo feito por Flávio Jeferson para CursoEmVideo.
+    </footer>
+
+
+    <script>
+        function clickMenu() {
+            if (menu.style.display == 'none') {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function recrutarLink(event) {
+            var link = event.currentTarget.querySelector('a');
+            link.style.color = 'red';
+        }
+    </script>
+</body>
+</html>

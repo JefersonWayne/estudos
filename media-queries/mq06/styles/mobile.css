@@ -2,49 +2,23 @@
 
 /*Folhas de estilos dedicada para dispositivos moveis*/
 
-header > #menu > #icon-menu {
-    display: block;
-    color: white;
-    background-color: rgb(77, 77, 77);
-    padding: 0.5em;
-    text-align: center;
-}
-
-header > #menu > #icon-menu:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(21, 21, 21);
-    box-shadow: 0 0 0.5em 0 rgba(162, 162, 162, 0.5);
-    transition: 0.3s;
-    cursor: pointer
-}
-
-header > #menu > #olist {
-    display: none;
-    text-align: left;
-    background-color: rgb(212, 212, 212);
-}
-
-header > #menu > #olist > li {
-    width: 100%;
-}
-
-header > #menu > #olist > li > a {
-    display: block;
-    width: 100%;
-    border-radius: 0.2em;
-    color: white;
-    background-color: rgb(77, 77, 77);
-    padding: 0.5em;
-    font-size: 0.8em;
-}
-header > #menu > #olist > li:hover > a:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(21, 21, 21);
-    box-shadow: 0 0 0.5em 0 rgba(162, 162, 162, 0.5);
-    transition: 0.3s;
-    cursor: pointer
-}
-
 main > article {
     width: 100vw;
+}
+
+header > #menu {
+    display: none;
+}
+
+header > #menu > a {
+    display: block;
+}
+
+header > #icon-menu {
+    display: block;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(143, 143, 143);
+    padding: 0.5em;
+    text-align: center;
 }
