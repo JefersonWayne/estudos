@@ -5,8 +5,10 @@
 .container {
     display: grid;
 
-    width: 100fr;
-    height: 100fr;
+    width: 50vw;
+    height: 100vh;
+
+    margin: auto;
 
     grid-template: repeat(3, 20vh) / 30fr 70fr;
     border: 2px solid gray;
@@ -18,4 +20,13 @@
     text-align: center;
     color: white;
     background-color: dodgerblue; 
+
+}
+
+.container > .box-one {
+    grid-column: 1 / 3;
+}
+
+.container:hover > .box-one {
+    grid-column: 1;
 }
