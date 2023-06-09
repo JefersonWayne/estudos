@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/*Exemplo 01 de GridBox*/
+
+.container {
+    display: grid;
+
+    width: 100fr;
+    height: 100fr;
+
+    grid-template: repeat(3, 20vh) / 30fr 70fr;
+    border: 2px solid gray;
+
+    gap: 1%;
+}
+
+.container > .box {
+    text-align: center;
+    color: white;
+    background-color: dodgerblue; 
+}
