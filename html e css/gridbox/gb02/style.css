@@ -5,7 +5,7 @@ body {
 
 .container {
     display: grid;
-    grid-template: repeat(3, 250px) / repeat(3, 250px);
+    grid-template: repeat(20, 250px) / repeat(3, 250px);
     gap: 0.5em;
     justify-content: center;
     align-content: center;
@@ -49,9 +49,22 @@ body {
     background: transparent url('images/image-5.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
+    grid-row: -4 / -2;
 }
 .container > .box-six {
     background: transparent url('images/image-6.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template: repeat(20, 250px) / repeat(2, 250px);
+    }
+}
+
+@media (max-width: 530px) {
+    .container {
+        grid-template: repeat(20, 250px) / repeat(1, 250px);
+    }
 }
