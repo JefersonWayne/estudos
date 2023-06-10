@@ -23,49 +23,35 @@ body {
 }
 
 .container > .box-one {
-    background: red url('images/image-1.jpg') no-repeat;
+    background: transparent url('images/image-1.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     grid-row: 1 / 3;
 }
 
 .container > .box-two {
-    background: red url('images/image-2.jpg') no-repeat;
+    background: transparent url('images/image-2.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .container > .box-three {
-    background: red url('images/image-3.jpg') no-repeat;
+    background: transparent url('images/image-3.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
-    grid-row: -4 / -2;
 }
 .container > .box-for {
-    background: red url('images/image-4.jpg') no-repeat;
+    background: transparent url('images/image-4.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     grid-row: 2 / 4;
 }
 .container > .box-five {
-    background: red url('images/image-5.jpg') no-repeat;
+    background: transparent url('images/image-5.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .container > .box-six {
-    background: red url('images/image-6.jpg') no-repeat;
+    background: transparent url('images/image-6.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
-@media (width: 760px) {
-    .container {
-        grid-template: repeat(6, 250px) / repeat(2, 250px);
-    }
-
-    .container > .box-three {
-        grid-row: auto;
-    }   
-    .container > .box-for {
-        grid-row: auto;
-    }
 }
