@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto Script em JS</title>
+    <style>
+        html {
+            cursor: default;
+            background-color: rgb(0, 40, 3);
+        }
+
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        span { 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            color: white;
+            background-color: rgb(0, 72, 6);
+            border-radius: 0.2rem;
+            display: inline-block;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+        }
+
+        span:hover {
+            cursor: text;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var sal = Number(window.prompt('Qual seu salário?')) // Abrir uma janela pergutando seu sálario, e convertendo a string em um number.
+        document.write(`<span> Seu salário é de <strong> ${sal.toLocaleString('PT-BR', {style: 'currency', currency: 'BRL'})} </strong> </span>`);
+
+        /* Nesse código, estamos utilizando o método toLocaleString() para formatar o valor do salário como uma representação de moeda, mais especificamente, em reais (BRL) seguindo as convenções brasileiras.
+        Vamos analisar cada parâmetro utilizado nessa função:
+
+        'PT-BR': Esse é o primeiro parâmetro, que representa o local específico para formatação. Nesse caso, estamos usando 'PT-BR', que corresponde ao idioma e às convenções de formatação brasileiras. Assim, o método toLocaleString() irá formatar o valor de acordo com as regras utilizadas no Brasil.
+
+        {style: 'currency', currency: 'BRL'}: Esse é o segundo parâmetro, um objeto que define o estilo e a moeda para a formatação.
+
+        style: 'currency': Aqui, estamos definindo o estilo como 'currency', indicando que queremos formatar o valor como uma moeda.
+
+        currency: 'BRL': Aqui, estamos definindo a moeda como 'BRL', que representa o Real brasileiro.
+
+        Portanto, o resultado desse trecho de código será uma representação formatada do valor do salário no formato de moeda brasileira, com o símbolo do Real (R$) e seguindo as convenções de separação de milhares e decimais utilizadas no Brasil. */
+
+        //  O método toFixed(2) é usado para formatar um número com duas casas decimais após o ponto
+        //  O método replace('.', ',') é usado para substituir o ponto (.) por uma vírgula (,) no valor do salário formatado.
+    </script>
+</body>
+</html>
