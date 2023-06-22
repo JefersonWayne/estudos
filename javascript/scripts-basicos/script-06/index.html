@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexto Script em JS</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: crimson;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 1rem;
+        }
+
+        main > * {
+            margin-bottom: 1rem;
+        }
+
+        main > button {
+            border: none;
+            background-color: white;
+            border-radius: 1rem;
+            color: black;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Primeiro passos com DOM!</h1>
+        <p>Aprendendo a utilizar o <strong>DOM</strong> com JavaScript</p>
+        <button id="change-theme" onclick="changeTheme()">Mude o tema!</button>
+    </main>
+    <script>
+    var corpo = document.body; // Variável que guarda a referência ao elemento body da página
+    var paragrafo = document.querySelector('p'); // Variável que guarda a referência ao primeiro elemento <p> encontrado na página
+    var botao = document.querySelector('#change-theme'); // Variável que guarda a referência ao elemento com o id 'change-theme'
+    var theme = 'Default'; // Variável que guarda o valor inicial do tema, que é 'Default'
+
+    function changeTheme() {
+        if (theme === 'Default') { // Verifica se o tema atual é 'Default'
+            theme = 'Black'; // Atualiza o valor do tema para 'Black'
+            corpo.style.cssText = 'background: white; color: black; transition: all 500ms;'; // Aplica estilos CSS ao elemento body
+            botao.style.cssText = 'background: black; color: white; transition: all 500ms;'; // Aplica estilos CSS ao elemento botão
+        } else {
+            theme = 'Default'; // Atualiza o valor do tema para 'Default'
+            corpo.style.cssText = 'background: crimson; color: white; transition: all 500ms;'; // Aplica estilos CSS ao elemento body
+            botao.style.cssText = 'background: white; color: black; transition: all 500ms;'; // Aplica estilos CSS ao elemento botão
+        }
+    }
+    </script>
+</body>
+</html>
