@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: rgb(20, 77, 220);
+            background-color: crimson;
             color: white;
             max-width: 100%;
             min-height: 100vh;
@@ -30,13 +30,18 @@
             justify-content: center;
             align-items: center;
         }
+        main > h1 {
+            margin-bottom: 2rem;
+        }
         main > div {
             width: 200px;
             height: 70px;
-            background-color: darkorchid;
-            border-radius: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 0.5rem;
+            padding: 1rem;
             display: flex;
             justify-content: center;
+            transition: all 1s;
             align-items: center;
         }
     </style>
@@ -46,5 +51,27 @@
         <h1>Eventos DOM</h1>
         <div>Interaja com essa caixa.</div>
     </main>
+
+    <script>
+    var box = document.querySelector('div'); // Seleciona o primeiro elemento <div> encontrado na página e armazena na variável 'box'
+    box.addEventListener('click', click); // Adiciona um ouvinte de evento de clique ao elemento 'box' que chama a função 'click'
+    box.addEventListener('mouseenter', enter); // Adiciona um ouvinte de evento de passagem do cursor ao elemento 'box' que chama a função 'enter'
+    box.addEventListener('mouseout', out); // Adiciona um ouvinte de evento de saída do cursor do elemento 'box' que chama a função 'out'
+
+    function click() { // Declaração da função 'click'
+        box.innerText = "Você clicou na caixa!"; // Define o texto interno do elemento 'box' como "Você clicou na caixa!"
+    }
+
+    function enter() { // Declaração da função 'enter'
+        box.innerText = "Você passou o cursor na caixa!"; // Define o texto interno do elemento 'box' como "Você passou o cursor na caixa!"
+        box.style.cssText = 'box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);'; // Aplica um estilo CSS ao elemento 'box' para adicionar uma sombra
+    }
+
+    function out() { // Declaração da função 'out'
+        box.innerText = "Você tirou o cursor da caixa!"; // Define o texto interno do elemento 'box' como "Você tirou o cursor da caixa!"
+    box.style.cssText = 'box-shadow: none;'; // Aplica um estilo CSS ao elemento 'box' para remover a sombra
+}
+
+    </script>
 </body>
 </html>
