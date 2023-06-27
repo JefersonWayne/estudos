@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            max-width: 100vw;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #0b0b0b;
+            align-content: center;
+        }
+
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+
+        }
+        h1 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        #button_1 {
+            margin: 0;
+            padding: 1rem 3rem;
+            cursor: pointer;
+            border: none;
+            color: white;
+            background-color: black;
+            border-radius: 1rem;
+            transition: 0.3s;
+        }
+
+        #button_1:hover {
+            background-color: rgb(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        #msg {
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .medida {
+            display: none;
+            align-self: flex-start;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            background: linear-gradient(to right, rgb(0, 125, 131), transparent);
+        }
+
+        .value {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Conversor de medidas</h1>
+        <button id="button_1">Clique aqui para iniciar.</button>
+        <p id="msg"><span class="value" id="m-value">0</span> metros (m) equivale á:</p>
+        <p class="medida" id="quilometros"><span class="value" id="km-value">0</span> quilômetro(s) (km)</p>
+        <p class="medida" id="hectometros"><span class="value" id="hm-value">0</span> hectômetro(s) (hm)</p>
+        <p class="medida" id="decametros"><span class="value" id="dam-value">0</span> decâmetro(s) (dam)</p>
+        <p class="medida" id="decimetros"><span class="value" id="dm-value">0</span> decímetro(s) (dm)</p>
+        <p class="medida" id="centimetros"><span class="value" id="cm-value">0</span> centímetro(s) (cm)</p>
+        <p class="medida" id="milimetros"><span class="value" id="mm-value">0</span> milímetro(s) (mm)</p>
+    </main>
+    <script src="scripts/script.js">
+    </script>
+</body>
+</html>

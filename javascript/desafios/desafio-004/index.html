@@ -33,10 +33,9 @@
 
         function onClick() {
             var produto = String(window.prompt('Qual o nome do produto que você comprou?'))
-            var valor = Number(window.prompt(`Quanto custou o ${produto}?`))
+            var valor = Number(window.prompt(`Quanto custou o produto ${produto}?`))
             var pagamento = Number(window.prompt(`Quanto você deu para comprar o produto ${produto}?`))
             var troco = pagamento - valor;
-
             if (troco <= 0) {
                 window.alert('Você não recebeu troco!');
             } else {
