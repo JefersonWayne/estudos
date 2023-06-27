@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de boas-vindas</title>
+    <style>
+        body {
+            padding: 1rem;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        #button_1 {
+            margin: 0;
+            padding: 1rem 3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas!</h1>
+    <button id="button_1">Inicie o desafio!</button>
+    
+    <script>
+        var button_1 = document.querySelector("#button_1");
+
+        button_1.addEventListener('click', onClick);
+
+        function onClick() {
+            var nome = String(window.prompt("Qual seu nome?"));
+            var idade = String(window.prompt(`Olá, ${nome}! Qual sua idade?`));
+            String(window.prompt(`Acabei de conhecer você, ${nome}! Você tem ${idade} anos de idade.`));
+        }
+    </script>
+</body>
+</html>

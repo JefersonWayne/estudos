@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de troco</title>
+    <style>
+        body {
+            padding: 1rem;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        #button_1 {
+            margin: 0;
+            padding: 1rem 3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o troco</h1>
+    <button id="button_1">Comprar produto</button>
+
+    <script>
+        var button_1 = document.querySelector('#button_1');
+
+        button_1.addEventListener('click', onClick)
+
+        function onClick() {
+            var produto = String(window.prompt('Qual o nome do produto que você comprou?'))
+            var valor = Number(window.prompt(`Quanto custou o ${produto}?`))
+            var pagamento = Number(window.prompt(`Quanto você deu para comprar o produto ${produto}?`))
+            var troco = pagamento - valor;
+
+            if (troco <= 0) {
+                window.alert('Você não recebeu troco!');
+            } else {
+                window.alert(`Você comprou o produto ${produto} por ${valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}.\nVocê entregou ${pagamento.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} e recebeu ${troco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} de troco!`)
+            }
+        }
+    </script>
+</body>
+</html>

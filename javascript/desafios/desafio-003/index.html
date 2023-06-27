@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor e sucessor</title>
+    <style>
+        body {
+            padding: 1rem;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        #button_1 {
+            margin: 0;
+            padding: 1rem 3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antecessor e sucessor</h1>
+    <button id="button_1">Antecessor e sucessor</button>
+
+    <script>
+        var button_1 = document.querySelector('#button_1');
+
+        button_1.addEventListener('click', onClick)
+
+        function onClick() {
+            var numero = Number(window.prompt("Digite um número qualquer."))
+            var antecessor = numero - 1;
+            var sucessor = numero + 1;
+            window.alert(`Antes de ${numero}, temos o número ${antecessor}.\nDepois de ${numero}, temos o número ${sucessor}.`)
+        }
+    </script>
+</body>
+</html>
