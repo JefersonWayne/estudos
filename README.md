@@ -2,7 +2,7 @@
 
 ## Estrutura do Repositório
 
-- 📁 **Estudos**: Aqui, você encontrará pastas com o nome da linguagem que estou estudando no momemento, dentro dessas pastas ira ter diversos exemplos de código que cobrem conceitos específicos. Esses exemplos são úteis para fins de aprendizado e referência.
+- 📁 **Estudos**: Aqui, você encontrará pastas com o nome da linguagem que estou estudando no momento, dentro dessas pastas ira ter diversos exemplos de código que cobrem conceitos específicos. Esses exemplos são úteis para fins de aprendizado e referência.
 
 ## Contribuição
 
