@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Conversor de R$ para US$</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', sans-serif;
+        }
+        body {
+            max-width: 100vw;
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+        }
+
+        main {
+            background-color: white;
+            color: black;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        main > h1 {
+            margin-bottom: 1rem;
+        }
+
+        main > button {
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 0.5rem;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        main > button:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <h1>Conversor de BRL (Real) para USD (Dólar)</h1>
-        <button>Clique aqui para executar</button>
+        <h1>Conversor de BRL (Real) &RightArrow; USD (Dólar)</h1>
+        <button id="botao">Clique aqui para executar</button>
     </main>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
