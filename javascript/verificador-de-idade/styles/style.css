@@ -81,7 +81,17 @@ footer > p {
     main {
         flex-direction: column;
     }
+    main > #info { 
+        width: 100%;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+    }
     main > #info > #botao {
         margin-bottom: 2rem;
+    }
+    main > #js {
+        width: 100%;
     }
 }
