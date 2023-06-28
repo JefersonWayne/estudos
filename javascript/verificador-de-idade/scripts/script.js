@@ -21,7 +21,7 @@ function onClick() {
 
                 var avatar = document.createElement('img');
                 section.appendChild(avatar);
-                avatar.style.margin = '1rem 0';
+                avatar.style.cssText = "margin: 1rem 0; width: 80%;";
 
                 var div = document.createElement('div');
                 section.appendChild(div);
@@ -31,7 +31,7 @@ function onClick() {
                     div.innerHTML = '<p>Detectamos que você é um <strong>bebê</strong>!</p>'
                 } else if (idade <= 12) {
                     avatar.src = 'images/crianca-m.png';
-                    div.innerHTML = '<p>Detectamos que você é um <strong>criança</strong>!</p>'
+                    div.innerHTML = '<p>Detectamos que você é uma <strong>criança</strong>!</p>'
                 } else if (idade <= 17) {
                     avatar.src = 'images/adolescente-m.png';
                     div.innerHTML = '<p>Detectamos que você é um <strong>adolescente</strong>!</p>'
@@ -59,7 +59,7 @@ function onClick() {
 
                 var avatar = document.createElement('img');
                 section.appendChild(avatar);
-                avatar.style.margin = '1rem 0';
+                avatar.style.cssText = "margin: 1rem 0; width: 80%;";
 
                 var div = document.createElement('div');
                 section.appendChild(div);
