@@ -64,7 +64,12 @@ main > #info > div > .label-strong {
 }
 
 main > #js {
+    display: flex;
+    flex-direction: column;
     width: 60%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 footer > p {
