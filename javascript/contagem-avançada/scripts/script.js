@@ -32,12 +32,10 @@ submitButton.addEventListener('click', function() {
         newP.setAttribute("id", "valor");
         newResultado.appendChild(newP)
 
-        var currentCount = comValue; // Inicializa a contagem com o valor de início
-
-        while (currentCount <= fimValue) {
-        newP.innerHTML += currentCount + " &#x1F449; ";
-        currentCount += passoValue; // Incrementa a contagem pelo valor do passo
+        for (var currentCount = comValue; currentCount <= fimValue; currentCount += passoValue) {
+            newP.innerHTML += currentCount + " &#x1F449; ";
         }
+        
         newP.innerHTML += " &#x1F3C1;";
 
     }
