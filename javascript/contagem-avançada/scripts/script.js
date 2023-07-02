@@ -13,32 +13,40 @@ submitButton.addEventListener('click', function() {
     var fimValue = parseInt(fimInput.value);
     var passoValue = parseInt(passoInput.value);
 
-    if (comValue >= fimValue || passoValue <= 0 || passoValue >= fimValue) {
-        alert("Oops! Valores inválidos. Certifique-se de que o número de início seja menor que o número de término e que o passo seja um valor positivo e que seja menor que o fim.");
+    if (passoValue <= 0) {
+        alert("Valor do passo não pode ser menor que 0!");
+        passoValue = 1;
         return;
     } else if (isNaN(comValue) || isNaN(fimValue) || isNaN(passoValue)) {
         alert('Por favor, insira valores numéricos válidos!');
-        return; // Encerra a função se algum valor for inválido
-    } else {
-        var divResultado = document.getElementById("resultado");
-        if (divResultado != null) {
-        divResultado.remove();
-        }
-        var newResultado = document.createElement("div");
-        newResultado.setAttribute("id", "resultado");
-        main.appendChild(newResultado)
+        return; 
+    }
+    var divResultado = document.getElementById("resultado");
+    if (divResultado != null) {
+    divResultado.remove();
+    }
 
-        var newP = document.createElement("p");
-        newP.setAttribute("id", "valor");
-        newResultado.appendChild(newP)
 
+    var newResultado = document.createElement("div");
+    newResultado.setAttribute("id", "resultado");
+    main.appendChild(newResultado)
+
+    var newP = document.createElement("p");
+    newP.setAttribute("id", "valor");
+    newResultado.appendChild(newP)
+
+
+    if (comValue <= fimValue) {
         for (var currentCount = comValue; currentCount <= fimValue; currentCount += passoValue) {
             newP.innerHTML += currentCount + " &#x1F449; ";
         }
-        
-        newP.innerHTML += " &#x1F3C1;";
-
+    } else {
+        for (var currentCount = comValue; currentCount >= fimValue; currentCount -= passoValue) {
+            newP.innerHTML += currentCount + " &#x1F449; ";
+        }
     }
+    
+    newP.innerHTML += " &#x1F3C1;";
 });
 
 
