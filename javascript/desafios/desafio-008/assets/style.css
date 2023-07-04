@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: default;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+div {
+    margin: 0 0 1rem 0;
+}
+
+div>label {
+    cursor: pointer;
+}
+
+div>input[type="number"] {
+    width: 10rem;
+    height: 1.5rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+input[type="button"] {
+    width: 10rem;
+    height: 2rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+div#divResult {
+    margin: 1rem 0 0 0;
+}
