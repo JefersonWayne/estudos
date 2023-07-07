@@ -1,53 +1,44 @@
 // Capturando os elementos do DOM
-var comInput = document.getElementById('com');
-var fimInput = document.getElementById('fim');
-var passoInput = document.getElementById('passo');
-var submitButton = document.getElementById('submit');
-var main = document.querySelector('main');
-
+const startInput = document.getElementById('com');
+const endInput = document.getElementById('fim');
+const stepInput = document.getElementById('passo');
+const submitButton = document.getElementById('submit');
+const main = document.querySelector('main');
 
 // Adicionando um evento de clique ao botão de envio
-submitButton.addEventListener('click', function() {
+submitButton.addEventListener('click', function () {
   // Obtendo os valores dos campos de entrada
-    var comValue = parseInt(comInput.value);
-    var fimValue = parseInt(fimInput.value);
-    var passoValue = parseInt(passoInput.value);
+  const startValue = parseInt(startInput.value);
+  const endValue = parseInt(endInput.value);
+  const stepValue = parseInt(stepInput.value);
 
-    if (passoValue <= 0) {
-        alert("Valor do passo não pode ser menor que 0!");
-        passoValue = 1;
-        return;
-    } else if (isNaN(comValue) || isNaN(fimValue) || isNaN(passoValue)) {
-        alert('Por favor, insira valores numéricos válidos!');
-        return; 
-    }
-    var divResultado = document.getElementById("resultado");
-    if (divResultado != null) {
-    divResultado.remove();
-    }
+  if (stepValue <= 0) {
+    alert("O valor do passo não pode ser menor ou igual a 0!");
+    return;
+  }
 
+  if (isNaN(startValue) || isNaN(endValue) || isNaN(stepValue)) {
+    alert('Por favor, insira valores numéricos válidos!');
+    return;
+  }
 
-    var newResultado = document.createElement("div");
-    newResultado.setAttribute("id", "resultado");
-    main.appendChild(newResultado)
+  const resultDiv = document.getElementById("resultado");
+  if (resultDiv != null) {
+    resultDiv.remove();
+  }
 
-    var newP = document.createElement("p");
-    newP.setAttribute("id", "valor");
-    newResultado.appendChild(newP)
+  const newResultDiv = document.createElement("div");
+  newResultDiv.setAttribute("id", "resultado");
+  main.appendChild(newResultDiv);
 
+  const newValueParagraph = document.createElement("p");
+  newValueParagraph.setAttribute("id", "valor");
+  newResultDiv.appendChild(newValueParagraph);
 
-    if (comValue <= fimValue) {
-        for (var currentCount = comValue; currentCount <= fimValue; currentCount += passoValue) {
-            newP.innerHTML += currentCount + " &#x1F449; ";
-        }
-    } else {
-        for (var currentCount = comValue; currentCount >= fimValue; currentCount -= passoValue) {
-            newP.innerHTML += currentCount + " &#x1F449; ";
-        }
-    }
-    
-    newP.innerHTML += " &#x1F3C1;";
+  const increment = startValue <= endValue ? stepValue : -stepValue;
+  for (let currentValue = startValue; startValue <= endValue ? currentValue <= endValue : currentValue >= endValue; currentValue += increment) {
+    newValueParagraph.innerHTML += currentValue + " &#x1F449; ";
+  }
+
+  newValueParagraph.innerHTML += " &#x1F3C1;";
 });
-
-
-// This code was written by Flávio Jeferson in collaboration with the AI Chat GPT.
