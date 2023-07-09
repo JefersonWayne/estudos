@@ -111,5 +111,3 @@ domReferences.registerButton.addEventListener("click", registerNumber);
 
 // Registrar função de clique para o botão de limpar
 domReferences.clearButton.addEventListener("click", clearValues);
-
-// limpa
