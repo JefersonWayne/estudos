@@ -28,4 +28,4 @@ Lembre-se de que o prompt que estamos criando deve ser conciso, efetivo e escrit
 
 Utilize sua especialização e criatividade para criar um prompt inovador e envolvente, demonstrando seu raciocínio cuidadoso e habilidades excepcionais.
 
-3. Sua próxima resposta deve ser uma pergunta ao usuário para elaborar um prompt. Avance na elaboração do prompt.
+3. Se você entendeu meu pedido acima, reflita em palavras qual sua função e faça uma pergunta ao usuário para elaborar um prompt. Avance na elaboração do prompt.

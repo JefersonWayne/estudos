@@ -1,74 +1,113 @@
 const domReferences = {
-    register: document.querySelector("#button-reg"),
+    registerButton: document.querySelector("#button-reg"),
     inputNumber: document.querySelector("#inputNumber"),
     select: document.querySelector("#registro"),
     main: document.querySelector("main"),
-}
+    clearButton: document.querySelector("#button-clear"),
+};
 
-var selectValues = [];
-let primeiro = true;
+const selectValues = [];
+let isFirstRegistration = true;
 
+// Função para registrar um número
 function registerNumber() {
-    const value = parseInt(domReferences.inputNumber.value)
-    if (isNaN(value) || value < 1 || value > 100) {
-        return alert("O valor mínimo é 1, e o máximo é 100");
-    } else if (selectValues.includes(value)) {
-        return alert("O valor inserido já está registrado!")
-    } else {
-        selectValues.push(value);
-        const opt = document.createElement("option");
-        opt.setAttribute("value", `valor-${value}`)
-        domReferences.select.appendChild(opt);
-        opt.textContent = `N° ${value} registrado!`;
+    const value = parseInt(domReferences.inputNumber.value);
+
+    if (isNaN(value)) {
+        return alert("Insira um número válido.");
     }
+
+    if (selectValues.includes(value)) {
+        return alert("O valor inserido já está registrado!");
+    }
+
+    selectValues.push(value);
+
+    const option = document.createElement("option");
+    option.setAttribute("value", `valor-${value}`);
+    option.textContent = `N° ${value} registrado!`;
+    domReferences.select.appendChild(option);
 }
 
-function somarValores(array) {
-    let soma = 0;
-    for (let i = 0; i < array.length; i++) {
-        soma += array[i];
-    }
-    return soma;
+// Função para somar os valores
+function sumValues(array) {
+    return array.reduce((sum, value) => sum + value, 0);
 }
 
-function encontrarMenorMaiorValores(array) {
-    array.sort();
-    let menor = array[0]; // Começamos assumindo que o primeiro elemento é o menor
-    let maior = array[0]; // Começamos assumindo que o primeiro elemento é o maior
+// Função para encontrar o menor e o maior valor
+function findSmallestAndLargestValues(array) {
+    let smallest = array[0];
+    let largest = array[0];
 
     for (let i = 1; i < array.length; i++) {
-        if (array[i] < menor) {
-            menor = array[i]; // Atualizamos o valor de "menor" se encontrarmos um valor menor
+        if (array[i] < smallest) {
+            smallest = array[i];
         }
-        if (array[i] > maior) {
-            maior = array[i]; // Atualizamos o valor de "maior" se encontrarmos um valor maior
+        if (array[i] > largest) {
+            largest = array[i];
         }
     }
 
-    return { menor, maior }; // Retornamos um objeto com as propriedades "menor" e "maior"
+    return { smallest, largest };
 }
 
+// Função para gerar o resumo
 function generateSummary() {
-    if (selectValues.length == 0) {
-        return alert("Insira pelo menos um valor no registro.")
-    } else {
-        if (primeiro == true) {
-            for (var i = 1; i < 6; i++) {
-                const p = document.createElement("p");
-                p.setAttribute("id", "p-" + i);
-                p.innerText = "paragrafo-" + i;
-                domReferences.main.appendChild(p)
-            }
-            primeiro = false;
-        }
-        let soma = somarValores(selectValues);
-        let maioremenor = encontrarMenorMaiorValores(selectValues);
-        document.querySelector("p#p-1").innerHTML = `Ao todo, temos <strong>${selectValues.length}</strong> selecionados`
-        document.querySelector("p#p-2").innerHTML = `O maior número informado foi <strong>${maioremenor.maior}</strong>`
-        document.querySelector("p#p-3").innerHTML = `O menor número informado foi <strong>${maioremenor.menor}</strong>`
-        document.querySelector("p#p-4").innerHTML = `Somando todos os valores temos o número <strong>${soma}</strong>`
-        document.querySelector("p#p-5").innerHTML = `A média dos valores digitados é <strong>${Math.floor(soma / selectValues.length)}</strong>`
+    if (selectValues.length === 0) {
+        return alert("Insira pelo menos um valor no registro.");
+    }
+
+    if (isFirstRegistration) {
+        addParagraphsToDOM();
+        isFirstRegistration = false;
+    }
+
+    const sum = sumValues(selectValues);
+    const { smallest, largest } = findSmallestAndLargestValues(selectValues);
+
+    updateParagraphs(sum, smallest, largest);
+}
+
+// Função para adicionar os parágrafos ao DOM
+function addParagraphsToDOM() {
+    for (let i = 1; i < 6; i++) {
+        const paragraph = document.createElement("p");
+        paragraph.setAttribute("id", `p-${i}`);
+        paragraph.textContent = `paragrafo-${i}`;
+        domReferences.main.appendChild(paragraph);
     }
 }
 
-domReferences.register.addEventListener('click', registerNumber);
+// Função para atualizar os parágrafos
+function updateParagraphs(sum, smallest, largest) {
+    document.querySelector("p#p-1").innerHTML = `Ao todo, temos <strong>${selectValues.length}</strong> registrados.`;
+    document.querySelector("p#p-2").innerHTML = `O maior número informado foi <strong>${largest}</strong>.`;
+    document.querySelector("p#p-3").innerHTML = `O menor número informado foi <strong>${smallest}</strong>.`;
+    document.querySelector("p#p-4").innerHTML = `Somando todos os valores temos o número <strong>${sum}</strong>.`;
+    document.querySelector("p#p-5").innerHTML = `A média dos valores digitados é <strong>${Math.floor(sum / selectValues.length)}</strong>.`;
+}
+
+// Função para remover os parágrafos do sumário do DOM
+function removeParagraphsFromDOM() {
+    for (let i = 1; i < 6; i++) {
+        const paragraph = document.querySelector(`#p-${i}`);
+        if (paragraph) {
+            paragraph.remove();
+        }
+    }
+}
+
+// Função para limpar os valores registrados
+function clearValues() {
+    selectValues.length = 0;
+    domReferences.select.innerHTML = "";
+    isFirstRegistration = true;
+    updateParagraphs(0, 0, 0);
+    removeParagraphsFromDOM();
+}
+
+// Registrar função de clique para o botão de registro
+domReferences.registerButton.addEventListener("click", registerNumber);
+
+// Registrar função de clique para o botão de limpar
+domReferences.clearButton.addEventListener("click", clearValues);

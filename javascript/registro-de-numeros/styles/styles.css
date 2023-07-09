@@ -66,8 +66,9 @@ main>#registration>input#inputNumber {
 input[type=button] {
     width: 7rem;
     height: 2rem;
+    margin: 0 0.5rem;
     letter-spacing: 0.125rem;
-    border-radius: 0.5rem;
+    border-radius: 0.1rem;
     background-color: #032750;
     color: white;
     font-weight: 500;
