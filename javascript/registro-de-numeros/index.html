@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre seus números!</title>
+</head>
+
+<body>
+    <header>
+        <h1>Gerador de sumário</h1>
+    </header>
+    <main>
+        <section id="registration">
+            <label for="inputNumber">Número &rightarrow;</label>
+            <input type="number" id="inputNumber" min="1" max="100" placeholder="e.g. 12">
+            <input type="button" value="Registrar" id="button-reg">
+        </section>
+        <select id="registro" size="10">
+        </select>
+        <input id="button-sum" type="button" onclick="generateSummary()" value="Sumário">
+    </main>
+    <footer>
+        <small>&copy; Flávio Jeferson</small>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
