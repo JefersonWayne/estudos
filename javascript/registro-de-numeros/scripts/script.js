@@ -13,7 +13,7 @@ let isFirstRegistration = true;
 function registerNumber() {
     const value = parseInt(domReferences.inputNumber.value);
 
-    if (isNaN(value)) {
+    if (isNaN(value) || value < 1) {
         return alert("Insira um número válido.");
     }
 
@@ -80,7 +80,7 @@ function addParagraphsToDOM() {
 
 // Função para atualizar os parágrafos
 function updateParagraphs(sum, smallest, largest) {
-    document.querySelector("p#p-1").innerHTML = `Ao todo, temos <strong>${selectValues.length}</strong> registrados.`;
+    document.querySelector("p#p-1").innerHTML = `Ao todo, temos <strong>${selectValues.length}</strong> números registrados.`;
     document.querySelector("p#p-2").innerHTML = `O maior número informado foi <strong>${largest}</strong>.`;
     document.querySelector("p#p-3").innerHTML = `O menor número informado foi <strong>${smallest}</strong>.`;
     document.querySelector("p#p-4").innerHTML = `Somando todos os valores temos o número <strong>${sum}</strong>.`;
@@ -111,3 +111,5 @@ domReferences.registerButton.addEventListener("click", registerNumber);
 
 // Registrar função de clique para o botão de limpar
 domReferences.clearButton.addEventListener("click", clearValues);
+
+// limpa
